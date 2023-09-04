@@ -23,8 +23,8 @@ public class ChunkRenderer : MonoBehaviour
     {
         //if (!already)
         //{
-            //MainGeneration();
-            //already = true;
+            MainGeneration();
+            already = true;
         //}
     }
 

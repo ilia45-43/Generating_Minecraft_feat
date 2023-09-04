@@ -101,6 +101,7 @@ MonoBehaviour:
   ParentWorld: {fileID: 0}
   verticies: []
   triangles: 
+  already: 1
 --- !u!64 &6700240162364517883
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -16,38 +16,38 @@ public class World : MonoBehaviour
 
     public TerrainGenerator hightMap;
 
-    public bool already = false;
+    public bool already = true;
 
     private void Start()
     {
         //if (already)
         //{
-            //hightMap = gameObject.GetComponent<TerrainGenerator>();
-            //hightMap.GenerateMap();
-            //GenerateWorld();
-            //already = true;
+            hightMap = gameObject.GetComponent<TerrainGenerator>();
+            hightMap.GenerateMap();
+            GenerateWorld();
+            already = true;
         //}
     }
 
     private void Update()
     {
-        //hightMap = gameObject.GetComponent<TerrainGenerator>();
-        //if (Input.GetKeyDown(KeyCode.H))
-        //{
-        //    var a = GameObject.FindGameObjectsWithTag("Respawn");
-        //    foreach (var e in a)
-        //    {
-        //        Destroy(e);
-        //    }
-        //    a = null;
-        //    ChunkDatas.Clear();
-        //    ChunkDatasWater.Clear();
-        //    ChunkDatasStone.Clear();
+        hightMap = gameObject.GetComponent<TerrainGenerator>();
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            var a = GameObject.FindGameObjectsWithTag("Respawn");
+            foreach (var e in a)
+            {
+                Destroy(e);
+            }
+            a = null;
+            ChunkDatas.Clear();
+            ChunkDatasWater.Clear();
+            //ChunkDatasStone.Clear();
 
-        //    hightMap.GenerateMap();
+            hightMap.GenerateMap();
 
-        //    GenerateWorld();
-        //}
+            GenerateWorld();
+        }
     }
 
     private void GenerateWorld()
